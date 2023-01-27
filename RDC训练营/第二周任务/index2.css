@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.box {
+    width: 500px;
+    height: 150px;
+    margin: 50px auto;
+    background-color: pink;
+}
+
+.box .head {
+    height: 30px;
+    line-height: 30px;
+    background-color: purple;
+}
+
+.box .head h3 span {
+    color: #91919b;
+    margin-left: 5px;
+}
+
+.box .head h3 {
+    float: left;
+}
+
+.box .head div {
+    cursor: pointer;
+    float: right;
+    color: #91919b;
+    margin-right: 20px;
+}
+
+.box .head h3 a:hover,
+.box .head div:hover {
+    color: blue;
+}
+
+.box .main li {
+    padding-top: 10px;
+    margin-left: 20px;
+}
+
+.box .main li .index {
+    float: left;
+    color: red;
+    font-weight: 700;
+}
+
+.box .main li a {
+    color: blue;
+    margin-left: 10px;
+}
+
+.box .main li a:hover {
+    text-decoration: underline;
+}
+
+.box .main li .num {
+    color: gray;
+    float: right;
+}
+
+.box .main li img {
+    cursor: text;
+    height: 15px;
+    width: 15px;
+}
