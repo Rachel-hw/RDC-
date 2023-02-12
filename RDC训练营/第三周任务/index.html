@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录-知乎</title>
+    <link rel="stylesheet" href="font_3846300_f6w1mco0q34/iconfont.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <h1 id="title">
+        <img src="../photo/知乎logo.png" alt="知乎">
+    </h1>
+    <!-- 主体框 -->
+    <div id="box">
+
+        <div class="left">
+            <h3>打开知乎App</h3>
+            <p index="0">在[ 我的页 ] 左上角打开扫一扫</p>
+            <div class="QR">
+                <img src="../photo/知乎QRcode.png" alt="扫码登录">
+            </div>
+            <p>其他扫码方式: <span>微信</span> </p>
+            <ul class="left_nav">
+                <li>下载知乎app</li>
+                <li>开通机构号</li>
+                <li>无障碍模式</li>
+            </ul>
+        </div>
+
+
+        <div class="right">
+            <ul class="right_nav">
+                <li class="li_active">验证码登录</li>
+                <li>密码登录</li>
+            </ul>
+
+            <!-- 这里是手机验证码登录 -->
+            <div class="login_verification">
+                <form action="#" method="get">
+                    <div class="phone">
+                        <select name="area">
+                            <option>中国 +86</option>
+                            <option>美国 +1</option>
+                            <option>日本 +81</option>
+                            <option>中国香港 +852</option>
+                            <option>中国澳门 +853</option>
+                            <option>中国台湾 +886</option>
+                        </select>
+                        <input type="text" name="phone_number" placeholder="手机号">
+                    </div>
+
+                    <div class="verification">
+                        <input type="text" name="code" placeholder="请输入6位验证码">
+                        <span class="get_code">获取短信验证码</span>
+                    </div>
+
+                    <div class="get_code_listen">获取语音验证码</div>
+                    <button name="login">登录/注册</button>
+                </form>
+            </div>
+
+            <div class="login_pass">
+                <form action="" method="get">
+                    <div><input type="text" name="uname" placeholder="手机号或邮箱"></div>
+                    <div><input type="password" name="pass" placeholder="密码"></div>
+
+                    <span class="out_area">海外手机号登录</span>
+                    <span class="forget"><a href="https://www.zhihu.com/account/password_reset">忘记密码</a></span>
+                    <button type="submit">登录</button>
+                </form>
+
+
+            </div>
+
+            <div class="others">
+                <div class="tit">其他登录方式</div>
+
+                <ul>
+                    <li><span class="iconfont">&#xe883;</span></li>
+                    <li><span class="iconfont">&#xe885;</span></li>
+                    <li><span class="iconfont">&#xe8c3;</span></li>
+                </ul>
+
+                <p>未注册手机验证后自动登录，注册即代表同意 <a href="">《知乎协议》</a> <a href="">《隐私保护指引》</a> </p>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾部声明 -->
+    <div id="footer">
+        <ul>
+            <li><a href="#">知乎专栏</a></li>
+            <li><a href="#">圆桌</a></li>
+            <li><a href="#">发现</a></li>
+            <li><a href="#">移动应用</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">来知乎工作</a></li>
+            <li class="last"><a href="#">注册机构号</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">2023 知乎</a></li>
+            <li><a href="#">京 ICP 证 110745 号</a></li>
+            <li><a href="#">京 ICP 备 13052560 号 - 1</a></li>
+            <li><a href="#">京公网安备 11010802020088 号</a></li>
+            <li><a href="#">京网文[2022]2674-081号</a></li>
+            <li><a href="#">出版物经营许可证</a></li>
+            <li class="last"><a href="#">药品医疗器械网络信息服务备案（京）网药械信息备字（2022）第00334号</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">侵权举报</a></li>
+            <li><a href="#">网上有害信息举报专区</a></li>
+            <li><a href="#">儿童色情信息举报专区</a></li>
+            <li><a href="#">互联网算法推荐举报专区</a></li>
+            <li><a href="#">违法和不良信息举报：010-82716601</a></li>
+            <li class="last"><a href="#">举报邮箱：jubao@zhihu.com</a></li>
+        </ul>
+        <a href="#"><img src="../photo/知乎无障碍服务.png" alt="无障碍模式"></a>
+
+
+
+    </div>
+    <script>
+        window.onload = function () {
+            let right_nav = document.querySelectorAll("#box .right .right_nav li");
+            let login_verification = document.querySelector("#box .right .login_verification");
+            let login_pass = document.querySelector("#box .right .login_pass");
+
+            right_nav[0].addEventListener("click", function () {
+                login_verification.style.display = "block";
+                login_pass.style.display = "none";
+                this.className = "li_active";
+                right_nav[1].className = "";
+            })
+            right_nav[1].addEventListener("click", function () {
+                login_verification.style.display = "none";
+                login_pass.style.display = "block";
+                this.className = "li_active";
+                right_nav[0].className = "";
+            })
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
